@@ -1,1 +1,36 @@
 <!-- Login View -->
+ <div class="container login-page" id="login-page">
+  <div class="row login-row">
+    <div class="col-md-6 col-lg-5">
+      <div class="card login-card">
+        <div class="card-body login-card-body">
+
+          <h1 class="login-title"><i class="bi bi-box-arrow-in-right"></i> Login</h1>
+          <p class="login-subtitle">Sign in to borrow books and manage your loans.</p>
+
+          <form class="login-form" id="login-form" novalidate>
+            <div class="login-field">
+              <label class="form-label login-label" for="login-email">Email</label>
+              <input type="email" class="form-control login-input" id="login-email" name="email" placeholder="name@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="login-field">
+              <label class="form-label login-label" for="login-password">Password</label>
+              <input type="password" class="form-control login-input" id="login-password" name="password" placeholder="Your password" autocomplete="current-password" required>
+            </div>
+
+            <div class="login-message" id="login-message"></div>
+
+            <button type="button" class="btn btn-primary login-button" id="login-button">Login</button>
+          </form>
+
+          <p class="login-footer">
+            Don't have an account?
+            <a href="#register" class="login-link" id="login-register-link">Register here</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

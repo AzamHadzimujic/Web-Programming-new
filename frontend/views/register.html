@@ -1,1 +1,56 @@
 <!-- Register View -->
+ <div class="container register-page" id="register-page">
+  <div class="row register-row">
+    <div class="col-md-8 col-lg-6">
+      <div class="card register-card">
+        <div class="card-body register-card-body">
+
+          <h1 class="register-title"><i class="bi bi-person-plus"></i> Create an Account</h1>
+          <p class="register-subtitle">Join the library to start borrowing books.</p>
+
+          <form class="register-form" id="register-form" novalidate>
+            <div class="row register-name-row">
+              <div class="col-md-6">
+                <div class="register-field">
+                  <label class="form-label register-label" for="register-first-name">First name</label>
+                  <input type="text" class="form-control register-input" id="register-first-name" name="first_name" placeholder="First name" autocomplete="given-name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="register-field">
+                  <label class="form-label register-label" for="register-last-name">Last name</label>
+                  <input type="text" class="form-control register-input" id="register-last-name" name="last_name" placeholder="Last name" autocomplete="family-name" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="register-field">
+              <label class="form-label register-label" for="register-email">Email</label>
+              <input type="email" class="form-control register-input" id="register-email" name="email" placeholder="name@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="register-field">
+              <label class="form-label register-label" for="register-password">Password</label>
+              <input type="password" class="form-control register-input" id="register-password" name="password" placeholder="Choose a password" autocomplete="new-password" required>
+            </div>
+
+            <div class="register-field">
+              <label class="form-label register-label" for="register-confirm-password">Confirm password</label>
+              <input type="password" class="form-control register-input" id="register-confirm-password" name="confirm_password" placeholder="Repeat your password" autocomplete="new-password" required>
+            </div>
+
+            <div class="register-message" id="register-message"></div>
+
+            <button type="button" class="btn btn-primary register-button" id="register-button">Register</button>
+          </form>
+
+          <p class="register-footer">
+            Already have an account?
+            <a href="#login" class="register-link" id="register-login-link">Login here</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

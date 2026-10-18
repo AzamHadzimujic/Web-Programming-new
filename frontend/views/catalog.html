@@ -1,1 +1,216 @@
 <!-- Catalog View -->
+ <div class="container catalog-page" id="catalog-page">
+
+  <header class="catalog-header" id="catalog-header">
+    <h1 class="catalog-title"><i class="bi bi-collection"></i> Book Catalog</h1>
+    <p class="catalog-subtitle">Search and filter the library collection.</p>
+  </header>
+
+  <section class="card catalog-filters" id="catalog-filters">
+    <div class="card-body catalog-filters-body">
+      <form class="row catalog-filters-form" id="catalog-filters-form" novalidate>
+        <div class="col-lg-4">
+          <label class="form-label catalog-filter-label" for="catalog-search">Search</label>
+          <input type="search" class="form-control catalog-filter-input" id="catalog-search" name="search" placeholder="Title, author or ISBN">
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <label class="form-label catalog-filter-label" for="catalog-category">Category</label>
+          <select class="form-select catalog-filter-select" id="catalog-category" name="category">
+            <option value="">All categories</option>
+            <option value="1">Classics</option>
+            <option value="2">Fiction</option>
+            <option value="3">Fantasy</option>
+            <option value="4">Science</option>
+            <option value="5">History</option>
+          </select>
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <label class="form-label catalog-filter-label" for="catalog-author">Author</label>
+          <select class="form-select catalog-filter-select" id="catalog-author" name="author">
+            <option value="">All authors</option>
+            <option value="1">Jane Austen</option>
+            <option value="2">George Orwell</option>
+            <option value="3">J.R.R. Tolkien</option>
+            <option value="4">Stephen Hawking</option>
+            <option value="5">F. Scott Fitzgerald</option>
+            <option value="6">Yuval Noah Harari</option>
+          </select>
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <label class="form-label catalog-filter-label" for="catalog-availability">Availability</label>
+          <select class="form-select catalog-filter-select" id="catalog-availability" name="availability">
+            <option value="">All books</option>
+            <option value="available">Available now</option>
+            <option value="unavailable">Currently borrowed</option>
+          </select>
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <label class="form-label catalog-filter-label" for="catalog-sort">Sort by</label>
+          <select class="form-select catalog-filter-select" id="catalog-sort" name="sort">
+            <option value="title">Title (A-Z)</option>
+            <option value="year-desc">Newest first</option>
+            <option value="year-asc">Oldest first</option>
+          </select>
+        </div>
+        <div class="col-12 catalog-filter-actions">
+          <button type="button" class="btn btn-primary catalog-apply-button" id="catalog-apply-button"><i class="bi bi-funnel"></i> Apply filters</button>
+          <button type="button" class="btn btn-outline-secondary catalog-reset-button" id="catalog-reset-button">Reset</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <p class="catalog-results-count" id="catalog-results-count">Showing 6 books</p>
+
+  <section class="row catalog-grid" id="catalog-grid">
+
+    <div class="col-sm-6 col-lg-4">
+      <article class="card catalog-book-card" data-book-id="1">
+        <div class="catalog-book-cover"><i class="bi bi-book"></i></div>
+        <div class="card-body catalog-book-body">
+          <h2 class="catalog-book-title">Pride and Prejudice</h2>
+          <p class="catalog-book-author">Jane Austen</p>
+          <p class="catalog-book-meta"><span class="catalog-book-category">Classics</span> &middot; <span class="catalog-book-year">1813</span></p>
+          <span class="badge catalog-badge catalog-badge-available">Available (3 of 4)</span>
+        </div>
+        <div class="card-footer catalog-book-footer">
+          <button type="button" class="btn btn-outline-primary catalog-details-button" data-bs-toggle="modal" data-bs-target="#catalog-book-modal" data-book-id="1">Details</button>
+          <button type="button" class="btn btn-primary catalog-borrow-button" data-book-id="1">Borrow</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-sm-6 col-lg-4">
+      <article class="card catalog-book-card" data-book-id="2">
+        <div class="catalog-book-cover"><i class="bi bi-book"></i></div>
+        <div class="card-body catalog-book-body">
+          <h2 class="catalog-book-title">Nineteen Eighty-Four</h2>
+          <p class="catalog-book-author">George Orwell</p>
+          <p class="catalog-book-meta"><span class="catalog-book-category">Fiction</span> &middot; <span class="catalog-book-year">1949</span></p>
+          <span class="badge catalog-badge catalog-badge-unavailable">Borrowed (0 of 2)</span>
+        </div>
+        <div class="card-footer catalog-book-footer">
+          <button type="button" class="btn btn-outline-primary catalog-details-button" data-bs-toggle="modal" data-bs-target="#catalog-book-modal" data-book-id="2">Details</button>
+          <button type="button" class="btn btn-primary catalog-borrow-button" data-book-id="2" disabled>Borrow</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-sm-6 col-lg-4">
+      <article class="card catalog-book-card" data-book-id="3">
+        <div class="catalog-book-cover"><i class="bi bi-book"></i></div>
+        <div class="card-body catalog-book-body">
+          <h2 class="catalog-book-title">The Hobbit</h2>
+          <p class="catalog-book-author">J.R.R. Tolkien</p>
+          <p class="catalog-book-meta"><span class="catalog-book-category">Fantasy</span> &middot; <span class="catalog-book-year">1937</span></p>
+          <span class="badge catalog-badge catalog-badge-available">Available (2 of 3)</span>
+        </div>
+        <div class="card-footer catalog-book-footer">
+          <button type="button" class="btn btn-outline-primary catalog-details-button" data-bs-toggle="modal" data-bs-target="#catalog-book-modal" data-book-id="3">Details</button>
+          <button type="button" class="btn btn-primary catalog-borrow-button" data-book-id="3">Borrow</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-sm-6 col-lg-4">
+      <article class="card catalog-book-card" data-book-id="4">
+        <div class="catalog-book-cover"><i class="bi bi-book"></i></div>
+        <div class="card-body catalog-book-body">
+          <h2 class="catalog-book-title">A Brief History of Time</h2>
+          <p class="catalog-book-author">Stephen Hawking</p>
+          <p class="catalog-book-meta"><span class="catalog-book-category">Science</span> &middot; <span class="catalog-book-year">1988</span></p>
+          <span class="badge catalog-badge catalog-badge-available">Available (1 of 2)</span>
+        </div>
+        <div class="card-footer catalog-book-footer">
+          <button type="button" class="btn btn-outline-primary catalog-details-button" data-bs-toggle="modal" data-bs-target="#catalog-book-modal" data-book-id="4">Details</button>
+          <button type="button" class="btn btn-primary catalog-borrow-button" data-book-id="4">Borrow</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-sm-6 col-lg-4">
+      <article class="card catalog-book-card" data-book-id="5">
+        <div class="catalog-book-cover"><i class="bi bi-book"></i></div>
+        <div class="card-body catalog-book-body">
+          <h2 class="catalog-book-title">The Great Gatsby</h2>
+          <p class="catalog-book-author">F. Scott Fitzgerald</p>
+          <p class="catalog-book-meta"><span class="catalog-book-category">Classics</span> &middot; <span class="catalog-book-year">1925</span></p>
+          <span class="badge catalog-badge catalog-badge-available">Available (2 of 2)</span>
+        </div>
+        <div class="card-footer catalog-book-footer">
+          <button type="button" class="btn btn-outline-primary catalog-details-button" data-bs-toggle="modal" data-bs-target="#catalog-book-modal" data-book-id="5">Details</button>
+          <button type="button" class="btn btn-primary catalog-borrow-button" data-book-id="5">Borrow</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-sm-6 col-lg-4">
+      <article class="card catalog-book-card" data-book-id="6">
+        <div class="catalog-book-cover"><i class="bi bi-book"></i></div>
+        <div class="card-body catalog-book-body">
+          <h2 class="catalog-book-title">Sapiens</h2>
+          <p class="catalog-book-author">Yuval Noah Harari</p>
+          <p class="catalog-book-meta"><span class="catalog-book-category">History</span> &middot; <span class="catalog-book-year">2011</span></p>
+          <span class="badge catalog-badge catalog-badge-unavailable">Borrowed (0 of 1)</span>
+        </div>
+        <div class="card-footer catalog-book-footer">
+          <button type="button" class="btn btn-outline-primary catalog-details-button" data-bs-toggle="modal" data-bs-target="#catalog-book-modal" data-book-id="6">Details</button>
+          <button type="button" class="btn btn-primary catalog-borrow-button" data-book-id="6" disabled>Borrow</button>
+        </div>
+      </article>
+    </div>
+
+  </section>
+
+  <nav class="catalog-pagination" id="catalog-pagination" aria-label="Catalog pages">
+    <ul class="pagination catalog-pagination-list">
+      <li class="page-item disabled"><a class="page-link" href="#catalog">Previous</a></li>
+      <li class="page-item active"><a class="page-link" href="#catalog">1</a></li>
+      <li class="page-item"><a class="page-link" href="#catalog">2</a></li>
+      <li class="page-item"><a class="page-link" href="#catalog">3</a></li>
+      <li class="page-item"><a class="page-link" href="#catalog">Next</a></li>
+    </ul>
+  </nav>
+
+  <div class="modal fade catalog-modal" id="catalog-book-modal" tabindex="-1" aria-labelledby="catalog-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content catalog-modal-content">
+        <div class="modal-header catalog-modal-header">
+          <h2 class="modal-title catalog-modal-title" id="catalog-modal-title">Pride and Prejudice</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body catalog-modal-body">
+          <div class="row catalog-modal-row">
+            <div class="col-md-4">
+              <div class="catalog-modal-cover" id="catalog-modal-cover"><i class="bi bi-book"></i></div>
+            </div>
+            <div class="col-md-8">
+              <dl class="catalog-modal-details" id="catalog-modal-details">
+                <dt class="catalog-modal-term">Author</dt>
+                <dd class="catalog-modal-value" id="catalog-modal-author">Jane Austen</dd>
+                <dt class="catalog-modal-term">Category</dt>
+                <dd class="catalog-modal-value" id="catalog-modal-category">Classics</dd>
+                <dt class="catalog-modal-term">Year</dt>
+                <dd class="catalog-modal-value" id="catalog-modal-year">1813</dd>
+                <dt class="catalog-modal-term">ISBN</dt>
+                <dd class="catalog-modal-value" id="catalog-modal-isbn">9780141439518</dd>
+                <dt class="catalog-modal-term">Copies</dt>
+                <dd class="catalog-modal-value" id="catalog-modal-copies">3 of 4 available</dd>
+              </dl>
+              <p class="catalog-modal-description" id="catalog-modal-description">A short description of the book will appear here.</p>
+            </div>
+          </div>
+          <section class="catalog-modal-api" id="catalog-modal-api">
+            <h3 class="catalog-modal-api-title"><i class="bi bi-globe"></i> More from Open Library</h3>
+            <p class="catalog-modal-api-text" id="catalog-modal-api-content">Extra information from the external book API will appear here.</p>
+          </section>
+        </div>
+        <div class="modal-footer catalog-modal-footer">
+          <button type="button" class="btn btn-outline-secondary catalog-modal-close-button" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary catalog-modal-borrow-button" id="catalog-modal-borrow-button">Borrow</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
