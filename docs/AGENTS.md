@@ -12,7 +12,7 @@ Roles: admin, member. Entities: users, books, authors, loans, categories.
 ## Folder structure
 - frontend/: css/, js/, views/ (one HTML file per view), assets/
 - backend/: routes/, services/, dao/, middleware/, config/, logs/
-- docs/: AI_LOG.md and other documentation
+- docs/: AI_LOG.md for logging and ERD.md for the Database Schema
 
 ## Frontend rules
 - Each view is in its own file in frontend/views/.

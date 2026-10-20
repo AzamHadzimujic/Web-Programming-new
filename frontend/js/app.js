@@ -13,10 +13,11 @@ $(document).ready(function () {
   });
 
   function markActive() {
-    var hash = location.hash || "#home";
-    $(".navbar-nav .nav-link").removeClass("active")
-      .filter('[href="' + hash + '"]').addClass("active");
-  }
+  var hash = location.hash || "#home";
+  $(".navbar-nav .nav-link").each(function () {
+    $(this).toggleClass("active", $(this).attr("href") === hash);
+  });
+}
 
   $(window).on("hashchange", markActive);
   markActive();
