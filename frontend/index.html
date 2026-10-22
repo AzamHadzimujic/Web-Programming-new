@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/spapp.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-body" id="app-body">
+
+  <header class="app-header" id="app-header">
+    <nav class="navbar navbar-expand-lg app-navbar" id="app-navbar">
+      <div class="container">
+        <a class="navbar-brand app-brand" href="#home"><i class="bi bi-book"></i> Library Management System</a>
+        <button class="navbar-toggler app-navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#nav" aria-controls="nav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav app-nav-list">
+            <li class="nav-item"><a class="nav-link app-nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link app-nav-link" href="#catalog">Catalog</a></li>
+            <li class="nav-item"><a class="nav-link app-nav-link" href="#account">My Account</a></li>
+            <li class="nav-item"><a class="nav-link app-nav-link" href="#admin">Admin</a></li>
+            <li class="nav-item"><a class="nav-link app-nav-link" href="#login">Login</a></li>
+            <li class="nav-item"><a class="nav-link app-nav-link" href="#register">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="spapp" role="main" class="app-main">
+    <section id="home" data-load="views/home.html"></section>
+    <section id="catalog" data-load="views/catalog.html"></section>
+    <section id="account" data-load="views/account.html"></section>
+    <section id="admin" data-load="views/admin.html"></section>
+    <section id="login" data-load="views/login.html"></section>
+    <section id="register" data-load="views/register.html"></section>
+  </main>
+
+  <footer class="app-footer" id="app-footer">
+    <div class="container app-footer-inner">
+      <span class="app-footer-copy">&copy; Library Management System 2026</span>
+      <span class="app-footer-note">Web Programming Project</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.spapp.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

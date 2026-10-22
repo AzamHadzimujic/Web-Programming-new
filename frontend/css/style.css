@@ -1,0 +1,442 @@
+.app-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.app-nav-list {
+  margin-left: auto;
+}
+
+.app-footer {
+  padding: 1rem 0;
+  background: var(--bs-tertiary-bg);
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.app-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app-footer-note {
+  color: var(--bs-secondary-color);
+}
+
+.home-page,
+.login-page,
+.register-page,
+.catalog-page,
+.account-page,
+.admin-page {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+}
+
+.home-hero {
+  margin-bottom: 2rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: var(--bs-tertiary-bg);
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.home-hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--bs-secondary-color);
+}
+
+.home-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.home-search-input {
+  flex: 1 1 16rem;
+  max-width: 28rem;
+}
+
+.home-stats,
+.home-features,
+.account-summary,
+.catalog-grid {
+  --bs-gutter-y: 1.5rem;
+}
+
+.home-stats,
+.home-features {
+  margin-bottom: 2rem;
+}
+
+.home-stat-card,
+.catalog-book-card,
+.account-summary-card {
+  height: 100%;
+}
+
+.home-stat-card {
+  text-align: center;
+}
+
+.home-stat-icon {
+  font-size: 2.5rem;
+  color: var(--bs-primary);
+}
+
+.home-stat-number {
+  margin: 0.5rem 0 0;
+}
+
+.home-stat-label {
+  margin: 0;
+  color: var(--bs-secondary-color);
+}
+
+.home-feature-title {
+  font-size: 1.25rem;
+}
+
+.login-row,
+.register-row {
+  justify-content: center;
+}
+
+.login-title,
+.register-title {
+  margin-bottom: 0.25rem;
+  font-size: 1.75rem;
+}
+
+.login-subtitle,
+.register-subtitle {
+  margin-bottom: 1.5rem;
+  color: var(--bs-secondary-color);
+}
+
+.login-field,
+.register-field,
+.account-field {
+  margin-bottom: 1rem;
+}
+
+.login-button,
+.register-button {
+  width: 100%;
+}
+
+.login-footer,
+.register-footer {
+  margin: 1.5rem 0 0;
+  text-align: center;
+}
+
+.login-message,
+.register-message,
+.account-message {
+  margin-bottom: 1rem;
+  color: var(--bs-danger);
+}
+
+.login-message:empty,
+.register-message:empty,
+.account-message:empty {
+  display: none;
+}
+
+.catalog-header,
+.account-header {
+  margin-bottom: 1.5rem;
+}
+
+.catalog-title,
+.account-title {
+  margin-bottom: 0.25rem;
+  font-size: 2rem;
+}
+
+.catalog-subtitle,
+.account-subtitle {
+  margin: 0;
+  color: var(--bs-secondary-color);
+}
+
+.catalog-filters {
+  margin-bottom: 1rem;
+}
+
+.catalog-filters-form {
+  --bs-gutter-y: 1rem;
+}
+
+.catalog-filter-label {
+  margin-bottom: 0.25rem;
+}
+
+.catalog-filter-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.catalog-results-count {
+  margin-bottom: 1rem;
+  color: var(--bs-secondary-color);
+}
+
+.catalog-book-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.catalog-book-cover,
+.catalog-modal-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  font-size: 3.5rem;
+  color: var(--bs-secondary-color);
+  background: var(--bs-tertiary-bg);
+}
+
+.catalog-modal-cover {
+  height: 12rem;
+  border-radius: var(--bs-border-radius);
+}
+
+.catalog-book-body {
+  flex: 1;
+}
+
+.catalog-book-title {
+  margin-bottom: 0.25rem;
+  font-size: 1.15rem;
+}
+
+.catalog-book-author {
+  margin-bottom: 0.25rem;
+}
+
+.catalog-book-meta {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--bs-secondary-color);
+}
+
+.catalog-book-footer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.catalog-book-footer .btn {
+  flex: 1;
+}
+
+.catalog-badge-available {
+  background: var(--bs-success);
+}
+
+.catalog-badge-unavailable {
+  background: var(--bs-danger);
+}
+
+.catalog-pagination {
+  margin-top: 2rem;
+}
+
+.catalog-pagination-list {
+  justify-content: center;
+}
+
+.catalog-modal-row {
+  --bs-gutter-y: 1rem;
+}
+
+.account-profile-details,
+.catalog-modal-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0;
+}
+
+.account-profile-term,
+.catalog-modal-term {
+  font-weight: 600;
+}
+
+.account-profile-value,
+.catalog-modal-value {
+  margin: 0;
+}
+
+.catalog-modal-description {
+  margin-top: 1rem;
+}
+
+.catalog-modal-api {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.catalog-modal-api-title {
+  font-size: 1.1rem;
+}
+
+.account-profile,
+.account-summary,
+.account-loans {
+  margin-bottom: 1.5rem;
+}
+
+.account-profile-row {
+  --bs-gutter-y: 1rem;
+  align-items: center;
+}
+
+.account-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2.5rem;
+  color: #fff;
+  background: var(--bs-primary);
+  border-radius: 50%;
+}
+
+.account-profile-name {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.account-profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.account-summary-card {
+  text-align: center;
+}
+
+.account-summary-number {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--bs-primary);
+}
+
+.account-summary-label {
+  margin: 0;
+  color: var(--bs-secondary-color);
+}
+
+.account-section-title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.account-table,
+.admin-table {
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.account-cell-title {
+  font-weight: 600;
+}
+
+.account-empty {
+  display: none;
+  margin: 0;
+  color: var(--bs-secondary-color);
+}
+
+.account-badge-due {
+  color: #212529;
+  background: var(--bs-warning);
+}
+
+.account-badge-overdue,
+.admin-badge-overdue {
+  background: var(--bs-danger);
+}
+
+.admin-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.admin-tab-content {
+  padding-top: 1.5rem;
+}
+
+.admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-section-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.admin-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.admin-actions .btn + .btn {
+  margin-left: 0.25rem;
+}
+
+.admin-badge-admin,
+.admin-badge-active {
+  background: var(--bs-primary);
+}
+
+.admin-badge-member,
+.admin-badge-returned {
+  background: var(--bs-secondary);
+}
+
+.admin-form .form-label {
+  margin-bottom: 0.25rem;
+}
+
+.admin-form .form-control,
+.admin-form .form-select {
+  margin-bottom: 1rem;
+}
+
+.admin-isbn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-isbn-group .form-control {
+  flex: 1 1 12rem;
+  margin-bottom: 0;
+}

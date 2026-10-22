@@ -1,0 +1,175 @@
+<!-- Account View -->
+ <div class="container account-page" id="account-page">
+
+  <header class="account-header" id="account-header">
+    <h1 class="account-title"><i class="bi bi-person-circle"></i> My Account</h1>
+    <p class="account-subtitle">Your profile, current loans and loan history.</p>
+  </header>
+
+  <section class="card account-profile" id="account-profile">
+    <div class="card-body account-profile-body">
+      <div class="row account-profile-row">
+        <div class="col-md-2">
+          <div class="account-avatar" id="account-avatar"><i class="bi bi-person"></i></div>
+        </div>
+        <div class="col-md-7">
+          <h2 class="account-profile-name" id="account-profile-name">John Doe</h2>
+          <dl class="account-profile-details">
+            <dt class="account-profile-term">Email</dt>
+            <dd class="account-profile-value" id="account-profile-email">john.doe@example.com</dd>
+            <dt class="account-profile-term">Role</dt>
+            <dd class="account-profile-value" id="account-profile-role">Member</dd>
+            <dt class="account-profile-term">Member since</dt>
+            <dd class="account-profile-value" id="account-profile-since">2026-09-01</dd>
+          </dl>
+        </div>
+        <div class="col-md-3 account-profile-actions">
+          <button type="button" class="btn btn-outline-primary account-edit-button" id="account-edit-button" data-bs-toggle="modal" data-bs-target="#account-edit-modal"><i class="bi bi-pencil"></i> Edit profile</button>
+          <button type="button" class="btn btn-outline-secondary account-logout-button" id="account-logout-button"><i class="bi bi-box-arrow-right"></i> Logout</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="account-summary row" id="account-summary">
+    <div class="col-sm-4">
+      <div class="card account-summary-card">
+        <div class="card-body">
+          <p class="account-summary-number" id="account-summary-current">2</p>
+          <p class="account-summary-label">Current loans</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card account-summary-card">
+        <div class="card-body">
+          <p class="account-summary-number" id="account-summary-overdue">1</p>
+          <p class="account-summary-label">Overdue</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card account-summary-card">
+        <div class="card-body">
+          <p class="account-summary-number" id="account-summary-total">8</p>
+          <p class="account-summary-label">Books borrowed in total</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card account-loans" id="account-current-loans">
+    <div class="card-body account-loans-body">
+      <h2 class="account-section-title"><i class="bi bi-book"></i> Current loans</h2>
+      <div class="table-responsive account-table-wrapper">
+        <table class="table account-table" id="account-current-table">
+          <thead class="account-table-head">
+            <tr>
+              <th>Book</th>
+              <th>Author</th>
+              <th>Borrowed</th>
+              <th>Due date</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="account-table-body">
+            <tr data-loan-id="1">
+              <td class="account-cell-title">The Hobbit</td>
+              <td>J.R.R. Tolkien</td>
+              <td>2026-10-05</td>
+              <td>2026-10-19</td>
+              <td><span class="badge account-badge account-badge-due">Due soon</span></td>
+              <td><button type="button" class="btn btn-sm btn-primary account-return-button" data-loan-id="1">Return</button></td>
+            </tr>
+            <tr data-loan-id="2">
+              <td class="account-cell-title">Nineteen Eighty-Four</td>
+              <td>George Orwell</td>
+              <td>2026-09-20</td>
+              <td>2026-10-04</td>
+              <td><span class="badge account-badge account-badge-overdue">Overdue</span></td>
+              <td><button type="button" class="btn btn-sm btn-primary account-return-button" data-loan-id="2">Return</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="account-empty" id="account-current-empty">You have no current loans.</p>
+    </div>
+  </section>
+
+  <section class="card account-loans" id="account-history">
+    <div class="card-body account-loans-body">
+      <h2 class="account-section-title"><i class="bi bi-clock-history"></i> Loan history</h2>
+      <div class="table-responsive account-table-wrapper">
+        <table class="table account-table" id="account-history-table">
+          <thead class="account-table-head">
+            <tr>
+              <th>Book</th>
+              <th>Author</th>
+              <th>Borrowed</th>
+              <th>Returned</th>
+            </tr>
+          </thead>
+          <tbody class="account-table-body">
+            <tr data-loan-id="3">
+              <td class="account-cell-title">Pride and Prejudice</td>
+              <td>Jane Austen</td>
+              <td>2026-08-10</td>
+              <td>2026-08-22</td>
+            </tr>
+            <tr data-loan-id="4">
+              <td class="account-cell-title">A Brief History of Time</td>
+              <td>Stephen Hawking</td>
+              <td>2026-07-01</td>
+              <td>2026-07-15</td>
+            </tr>
+            <tr data-loan-id="5">
+              <td class="account-cell-title">The Great Gatsby</td>
+              <td>F. Scott Fitzgerald</td>
+              <td>2026-06-12</td>
+              <td>2026-06-25</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="account-empty" id="account-history-empty">No past loans yet.</p>
+    </div>
+  </section>
+
+  <div class="modal fade account-modal" id="account-edit-modal" tabindex="-1" aria-labelledby="account-edit-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content account-modal-content">
+        <div class="modal-header account-modal-header">
+          <h2 class="modal-title account-modal-title" id="account-edit-title">Edit profile</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body account-modal-body">
+          <form class="account-form" id="account-edit-form" novalidate>
+            <div class="account-field">
+              <label class="form-label account-label" for="account-first-name">First name</label>
+              <input type="text" class="form-control account-input" id="account-first-name" name="first_name" value="John" autocomplete="given-name" required>
+            </div>
+            <div class="account-field">
+              <label class="form-label account-label" for="account-last-name">Last name</label>
+              <input type="text" class="form-control account-input" id="account-last-name" name="last_name" value="Doe" autocomplete="family-name" required>
+            </div>
+            <div class="account-field">
+              <label class="form-label account-label" for="account-email">Email</label>
+              <input type="email" class="form-control account-input" id="account-email" name="email" value="john.doe@example.com" autocomplete="email" required>
+            </div>
+            <div class="account-field">
+              <label class="form-label account-label" for="account-new-password">New password (optional)</label>
+              <input type="password" class="form-control account-input" id="account-new-password" name="new_password" placeholder="Leave empty to keep the current one" autocomplete="new-password">
+            </div>
+            <div class="account-message" id="account-message"></div>
+          </form>
+        </div>
+        <div class="modal-footer account-modal-footer">
+          <button type="button" class="btn btn-outline-secondary account-cancel-button" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary account-save-button" id="account-save-button">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
